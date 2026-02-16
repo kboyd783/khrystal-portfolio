@@ -29,7 +29,8 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 # Copy the rest
-COPY . .
+COPY . . RUN rm -f bootstrap/cache/*.php
+
 
 # Build assets
 RUN npm run build
@@ -41,7 +42,4 @@ CMD php artisan config:clear \
  && php artisan route:clear \
  && php artisan view:clear \
  && php -S 0.0.0.0:$PORT -t public
-
-
-CMD php -S 0.0.0.0:$PORT -t public
 
