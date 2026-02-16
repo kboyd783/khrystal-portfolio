@@ -29,10 +29,12 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 # Copy the rest
-COPY . . RUN rm -f bootstrap/cache/*.php
+COPY . .
 
+# Remove cached Laravel bootstrap files
+RUN rm -f bootstrap/cache/*.php
 
-# Build assets
+# Build Vite assets
 RUN npm run build
 
 ENV PORT=8000
