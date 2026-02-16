@@ -31,6 +31,16 @@ RUN npm ci
 # Copy the rest
 COPY . .
 
+# ✅ Create required Laravel writable dirs (empty dirs aren't tracked by git)
+RUN mkdir -p bootstrap/cache \
+  storage/framework/cache \
+  storage/framework/sessions \
+  storage/framework/views \
+  storage/logs
+
+# ✅ Make them writable
+RUN chmod -R 775 bootstrap/cache storage
+
 # Remove cached Laravel bootstrap files
 RUN rm -f bootstrap/cache/*.php
 
