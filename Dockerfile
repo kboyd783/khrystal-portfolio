@@ -2,8 +2,10 @@ FROM php:8.2-cli
 
 # System deps
 RUN apt-get update && apt-get install -y \
-  git unzip libzip-dev libpng-dev libonig-dev libxml2-dev \
-  && docker-php-ext-install pdo pdo_mysql zip \
+  git unzip libzip-dev libpng-dev libjpeg62-turbo-dev libfreetype6-dev \
+  libonig-dev libxml2-dev libicu-dev \
+  && docker-php-ext-configure gd --with-freetype --with-jpeg \
+  && docker-php-ext-install pdo pdo_mysql zip gd intl \
   && rm -rf /var/lib/apt/lists/*
 
 # Composer
@@ -16,27 +18,24 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
 
 WORKDIR /var/www
 
-# Install PHP deps
+# Copy composer files first for caching
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Install JS deps + build assets
+# ✅ Avoid Laravel scripts running during build (they can fail on Render)
+RUN composer install --no-dev --optimize-autoloader --no-interaction --no-scripts
+
+# JS deps + build
 COPY package.json package-lock.json ./
 RUN npm ci
-COPY resources ./resources
-COPY vite.config.* tailwind.config.* postcss.config.* ./
-RUN npm run build
 
-# Copy app
+# Copy the rest
 COPY . .
 
-# Caches (safe even without DB)
-RUN php artisan config:cache || true \
- && php artisan route:cache || true \
- && php artisan view:cache || true
+# Build assets
+RUN npm run build
 
 ENV PORT=8000
 EXPOSE 8000
 
-# Start server on Render's port
 CMD php -S 0.0.0.0:$PORT -t public
+
