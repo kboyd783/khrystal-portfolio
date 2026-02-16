@@ -45,6 +45,23 @@ import AppLayout from '@/Layouts/AppLayout.vue'
           <div class="text-xs uppercase text-gray-500">Portfolio</div>
           <div class="mt-1 font-medium">See case studies</div>
         </a>
+        <a
+              href="/resume/kbattleresume.pdf"
+              target="_blank"
+              class="inline-flex items-center rounded-lg border px-6 py-3 text-sm font-medium hover:bg-gray-100 transition"
+    >
+      📄 View Resume
+    </a>
+
+      <a
+          href="/resume/kbattleresume.pdf"
+          download
+          class="inline-flex items-center rounded-lg bg-black text-white px-6 py-3 text-sm font-medium hover:opacity-80 transition"
+        >
+          ⬇ Download Resume
+        </a>
+
+
       </div>
     </section>
   </AppLayout>
