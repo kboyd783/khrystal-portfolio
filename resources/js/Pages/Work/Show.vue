@@ -1,5 +1,8 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
+import { ref } from 'vue'
+
+const activeImage = ref(null)
 
 defineProps({
   project: { type: Object, required: true },
@@ -116,7 +119,8 @@ Below is the process taken during this project</p>
       <img
         :src="img.src"
         :alt="img.caption || project.title"
-        class="w-full rounded-md border object-contain"
+        class="cursor-pointer rounded-lg border hover:opacity-80 transition"
+        @click="activeImage = img"        
         loading="lazy"
       />
       <figcaption
@@ -185,5 +189,23 @@ Below is the process taken during this project</p>
         <li v-for="n in project.next_steps" :key="n">{{ n }}</li>
       </ul>
     </section>
+
+  <div
+    v-if="activeImage"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6"
+    @click="activeImage = null">
+    <div class="max-w-5xl w-full">
+    <img
+      :src="activeImage.src"
+      :alt="activeImage.caption"
+      class="w-full rounded-lg shadow-2xl"
+    />
+
+    <p class="mt-4 text-center text-white">
+      {{ activeImage.caption }}
+    </p>
+  </div>
+</div>
+
   </AppLayout>
 </template>

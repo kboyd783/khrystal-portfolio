@@ -13,7 +13,7 @@ import AppLayout from '@/Layouts/AppLayout.vue'
 
       <div class="mt-8 grid gap-4 sm:grid-cols-2">
         <a
-          href="mailto:YOUR_EMAIL_HERE"
+          href="mailto:khrystalbattle@gmail.com"
           class="rounded-xl border p-5 hover:bg-gray-50"
         >
           <div class="text-xs uppercase text-gray-500">Email</div>
