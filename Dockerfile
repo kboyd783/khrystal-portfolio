@@ -37,5 +37,11 @@ RUN npm run build
 ENV PORT=8000
 EXPOSE 8000
 
+CMD php artisan config:clear \
+ && php artisan route:clear \
+ && php artisan view:clear \
+ && php -S 0.0.0.0:$PORT -t public
+
+
 CMD php -S 0.0.0.0:$PORT -t public
 
