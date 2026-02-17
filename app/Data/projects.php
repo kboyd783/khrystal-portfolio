@@ -208,20 +208,20 @@ return [
 
       'videos' => [
           [
-          'type' => 'local',
-          'src' => '/videos/Googleux/google.mp4',
+          'type' => 'embed',
+          'src' => 'https://drive.google.com/file/d/1pCrdv9I1cR61Od1C4cDZ3naqwaDMYNFC/view?usp=drive_link',
           'title' => 'Wireframes',
           ],
 
           [
-          'type' => 'local',
-          'src' => '/videos/Googleux/lowfi.mp4',
+          'type' => 'embed',
+          'src' => 'https://www.canva.com/design/DAHBh210sJY/g7s4F2BlEzwjU3dDyR2Q8Q/watch',
           'title' => 'LowFi',
           ],
 
           [
-          'type' => 'local',
-          'src' => '/videos/Googleux/midfi.mp4',
+          'type' => 'embed',
+          'src' => 'https://www.canva.com/design/DAHBiERKDj8/z9tgkSGgOhiQrvhopEaCyA/watch',
           'title' => 'Mid-Fi',
           ],
       ],
