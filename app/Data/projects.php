@@ -168,7 +168,7 @@ return [
      'videos' => [
       [
           'type' => 'embed',
-          'src' => 'https://www.loom.com/embed/d300bed9e06e4c2581bc092ae8f07429',
+          'src' => 'https://embed.figma.com/proto/TnSy1RIkYvhB999GsConCk/Peer-Space?node-id=951-228&starting-point-node-id=951%3A228&embed-host=share',
           'title' => 'Final Prototype',
       ],
     ],
