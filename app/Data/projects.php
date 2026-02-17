@@ -206,7 +206,7 @@ return [
       ],
 
 
-      'videos' => [
+      /* 'videos' => [
           [
           'type' => 'embed',
           'src' => 'https://drive.google.com/file/d/1pCrdv9I1cR61Od1C4cDZ3naqwaDMYNFC/view?usp=drive_link',
@@ -224,7 +224,7 @@ return [
           'src' => 'https://www.canva.com/design/DAHBiERKDj8/z9tgkSGgOhiQrvhopEaCyA/watch',
           'title' => 'Mid-Fi',
           ],
-      ],
+      ], */
 
       'images' => [
         [
