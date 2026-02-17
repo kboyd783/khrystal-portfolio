@@ -206,25 +206,21 @@ return [
       ],
 
 
-      /* 'videos' => [
-          [
-          'type' => 'embed',
-          'src' => 'https://drive.google.com/file/d/1pCrdv9I1cR61Od1C4cDZ3naqwaDMYNFC/view?usp=drive_link',
-          'title' => 'Wireframes',
-          ],
+       'videos' => [
+        
 
           [
           'type' => 'embed',
-          'src' => 'https://www.canva.com/design/DAHBh210sJY/g7s4F2BlEzwjU3dDyR2Q8Q/watch',
+          'src' => 'https://embed.figma.com/proto/sCLvq7vGQaQaFx2cIpLc5j/Untitled?node-id=4-225&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share',
           'title' => 'LowFi',
           ],
 
           [
           'type' => 'embed',
-          'src' => 'https://www.canva.com/design/DAHBiERKDj8/z9tgkSGgOhiQrvhopEaCyA/watch',
-          'title' => 'Mid-Fi',
+          'src' => 'https://embed.figma.com/proto/sCLvq7vGQaQaFx2cIpLc5j/Untitled?node-id=4-4614&starting-point-node-id=4%3A4614&embed-host=share',
+          'title' => 'Mid-Fi:New Working on a new design system for this with better scale, spacing and a better color story.',
           ],
-      ], */
+      ], 
 
       'images' => [
         [
@@ -243,6 +239,17 @@ return [
           'src' => '/images/googleux/testing.png',
           'caption' => 'Usability Testing'
         ], 
+
+         [
+          'src' => '/images/googleux/wireframe1.png',
+          'caption' => 'Wireframes'
+        ],
+        
+         [
+          'src' => '/images/googleux/wireframe2.png',
+          'caption' => 'Wireframes'
+        ], 
+        
         
 
     ],
