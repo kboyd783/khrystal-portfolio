@@ -25,7 +25,7 @@ defineProps({
             v-for="p in projects.slice(0, 3)"
             :key="p.slug"
             :href="`/work/${p.slug}`"
-            class="group rounded-xl border p-5 hover:bg-cyan-200"
+            class="group rounded-xl border p-5 hover:bg-gray-50"
             >
             <div class="text-xs uppercase text-gray-500">{{ p.type }} • {{ p.year }}</div>
             <div class="mt-2 text-lg font-semibold">{{ p.title }}</div>
