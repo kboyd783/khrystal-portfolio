@@ -18,7 +18,7 @@ return [
     'role' => 'UX/UI + Front-end (Design System + Component Strategy)',
     'timeline' => 'Ongoing',
     'tools' => ['Figma', 'Tailwind', 'Vue (Inertia)', 'Laravel'],
-    'problem' => 'UI inconsistency across pages slowed development and created a confusing experience.',
+    'problem' => 'UI inconsistency across pages slowed development, and created a confusing experience.',
     'goals' => [
         'Create consistent components and typography',
         'Define color tokens and spacing rules',
@@ -32,8 +32,8 @@ return [
     ],
     'design_iterations' => [
             'Used the three tiered approach to create the design system',
-            'Created the brand colors (green, red, blue, yellow, etc.) with based on what was already in Gemstone, edited when needed',
-            'From the brand I created an Alias colors (success, error, information, warning, etc). I did a scale to 900',
+            'Created the brand colors (green, red, blue, yellow, etc.), based on what was already in Gemstone.',
+            'From the Brand colors, I created Alias colors (success, error, information, warning, etc). I did a scale to 900.',
             'The last step was to map the colors.',
   
     ],
@@ -94,15 +94,15 @@ return [
   'process' => [
       ['title' => 'Research', 'detail' => 'Surveyed and interviewed learners to identify pain points and needs.'],
       ['title' => 'Define', 'detail' => 'Created personas and mapped key user journeys.'],
-      ['title' => 'Ideate', 'detail' => 'Sketched flows and explored feature options for matching and sessions.'],
+      ['title' => 'Ideate', 'detail' => 'Sketched flows and explored feature options for matching and study sessions.'],
       ['title' => 'Design', 'detail' => 'Built wireframes and a clickable prototype in Figma.'],
       ['title' => 'Test', 'detail' => 'Ran quick usability tests and iterated based on feedback.'],
   ],
 
   'design_iterations' => [
     'User Personas derived from initial research.',
-    'My moodboards for the look and feel, we decided on the simplistc look and one of the logos I sketched.',
-    'I created the chat screen and created multiple iterations, my final design included just the simplistic colors.',
+    'My moodboards for the look and feel of the website. We decided on the simplistc look, and selected the person reading a book logo I sketched.',
+    'I created the chat screen and created multiple iterations. My final design included just the simplistic color story.',
     'We desgined for only one user flow (Finding a match and booking a study session).'
   ],
 
@@ -181,7 +181,7 @@ return [
         'card_image' => '/images/work/basketball.png',
         'title' => 'Eddie Oates Basketball Training App',
         'slug' => 'google-ux',
-        'summary' => 'Mobile app that helps athletes book training sessions, track progress, and stay connected with their coach.',
+        'summary' => 'Mobile app that helps athletes book training sessions, track progress, and stay connected with their trainer.',
         'type' => 'ux',
         'year' => 2025,
         'role' => 'UX Designer, Researcher',
