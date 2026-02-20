@@ -218,7 +218,7 @@ return [
           [
           'type' => 'embed',
           'src' => 'https://embed.figma.com/proto/sCLvq7vGQaQaFx2cIpLc5j/Untitled?node-id=4-4614&starting-point-node-id=4%3A4614&embed-host=share',
-          'title' => 'Mid-Fi:New Working on a new design system for this with better scale, spacing and a better color story.',
+          'title' => 'Mid-Fi:Working on a new design system for this with better scale, spacing and a better color story.',
           ],
       ], 
 
